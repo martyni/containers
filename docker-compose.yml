@@ -1,0 +1,10 @@
+version: '2'
+services: 
+  app:
+    build: app/
+  nginx:
+    build: nginx/
+    depends_on:
+    - app
+    ports:
+    - "80:80"
